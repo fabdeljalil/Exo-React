@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Grille from "../Grille/Grille";
 import Button from "../Button/Button";
 import { Direction } from "../Data";
+import BlockButton from "../BlockButton/BlockButton";
 
 const Layout = () => {
   //const [color, setColor] = useState("gray");
@@ -18,8 +19,9 @@ const Layout = () => {
     <div>
       <Grille position={position} getPosition={getPosition}></Grille>
       {/* {Direction.map((item)=><Button name={item.dir}></Button> )} */}
-      <br />
-      <button onClick={hautButtonHanlder}> Bas</button>
+      {/* <br />
+      <button onClick={hautButtonHanlder}> Bas</button> */}
+      <BlockButton></BlockButton>
     </div>
   );
 };
