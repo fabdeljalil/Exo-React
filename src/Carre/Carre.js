@@ -3,7 +3,6 @@ import React from "react";
 import Classes from "./Carre.module.css";
 
 const Carre = (props) => {
-  const { background } = props;
   const { getPosition } = props;
   const { id } = props;
   const { isSelected } = props;

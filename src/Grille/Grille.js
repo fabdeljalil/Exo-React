@@ -24,7 +24,7 @@ function remplire() {
   return tab5;
 }
 
-const f = (background, getPosition, position) => {
+const f = (getPosition, position) => {
   //const tab2D = remplireTab(10, 9);
   const tab2D = remplire();
 
@@ -32,7 +32,6 @@ const f = (background, getPosition, position) => {
     return (
       <Carre
         id={item}
-        background={background}
         getPosition={getPosition}
         isSelected={position === item}
       ></Carre>
@@ -71,22 +70,10 @@ const f = (background, getPosition, position) => {
 //};
 
 const Grille = (props) => {
-  const { background } = props;
-
-  const { isClick } = props;
   const { position } = props;
   const { getPosition } = props;
 
-  const matrice = f(background, getPosition, position);
-  return (
-    <div className={Classes.maDiv}>
-      {matrice}
-      {/* {console.log(isClick)}
-      {console.log(position)}
-      {console.log(background)} */}
-
-      {/* //{isClick && t(matrice, position)} */}
-    </div>
-  );
+  const matrice = f(getPosition, position);
+  return <div className={Classes.maDiv}>{matrice}</div>;
 };
 export default Grille;
